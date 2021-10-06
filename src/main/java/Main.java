@@ -9,9 +9,12 @@ public class Main {
         String b = "b";
         String c = "c";
 
+        String d = null;
+
         myList.add(a);
         myList.add(b);
         myList.add(c);
+        myList.add(d);
 
         myList.remove(a);
 

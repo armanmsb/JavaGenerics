@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class TestFixedSizedList {
@@ -16,6 +17,10 @@ public class TestFixedSizedList {
     @Test
     public void testWithNullValues(){
 
+        FixedSizedList<String> myList = new FixedSizedList<>();
+        String a = null;
+        Assert.assertEquals(false, myList.add(a));
+
     }
 
     @Test
@@ -25,6 +30,11 @@ public class TestFixedSizedList {
 
     @Test
     public void removingNonIncludedElement(){
-
+        FixedSizedList<String> myList = new FixedSizedList<>();
+        String a = "a";
+        String b = "b";
+        myList.add(a);
+        myList.add(b);
+        Assert.assertEquals(false, myList.remove(c));
     }
 }

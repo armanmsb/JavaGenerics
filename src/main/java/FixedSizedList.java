@@ -8,27 +8,33 @@ public class FixedSizedList <T> implements Iterable<T>{
 
     private List<T> items = new ArrayList<T>();
 
-    public void add(T element){
+    public boolean add(T element){
 
         if(items.size() > 5){
             System.out.println("Maximum erreicht");
+            return false;
         }else if(element == null){
-            System.out.println("Übergebener Wert ist entspricht Null");
+            System.out.println("Übergebener Wert entspricht NULL");
+            return false;
         }else{
             items.add(element);
+            return true;
         }
     }
 
 
-    public void remove(T element){
+    public boolean remove(T element){
 
         for (int i = 0; i < items.size(); i++) {
             if(items.get(i).equals(element)){
                 items.remove(i);
+                return true;
             }
         }
+
+        return false;
     }
-    
+
     public T get(int index){
         return items.get(index);
     }
