@@ -28,7 +28,7 @@ public class FixedSizedList <T> implements Iterable<T>{
                 items.remove(i);
                 succesfullyRemoved = true;
             }
-            }
+        }
         if(!succesfullyRemoved){
             System.out.println("Element nicht vorhanden");
         }
