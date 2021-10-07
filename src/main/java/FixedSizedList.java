@@ -22,14 +22,18 @@ public class FixedSizedList <T> implements Iterable<T>{
 
     public void remove(T element){
 
+        boolean succesfullyRemoved = false;
         for (int i = 0; i < items.size(); i++) {
             if(items.get(i).equals(element)){
                 items.remove(i);
-            }else{
-                System.out.println("Element nicht vorhanden");
+                succesfullyRemoved = true;
             }
+            }
+        if(!succesfullyRemoved){
+            System.out.println("Element nicht vorhanden");
         }
     }
+
 
     public T get(int index){
         return items.get(index);
